@@ -1,0 +1,3 @@
+<h2>Welcome: {{(loggedUser$ | async)?.username}} {{(loggedUser$ | async)?.role}}</h2>
+<app-pretraga (searchEvent)="updateUsersList($event)"></app-pretraga>
+<app-user-list [searchText]="searchText"></app-user-list>

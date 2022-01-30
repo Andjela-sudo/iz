@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { SetUsersListAction } from './actions/users.actions';
+import { AppState } from './models/app-state.model';
+import { ApiServiceService } from './services/api-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ispiti-zadatak';
+
+
 }

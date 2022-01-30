@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+        <li *ngIf="loggedUser$ | async"><a [routerLink]="['/users']">Users</a></li>
+        <li *ngIf="!(loggedUser$ | async)"><a [routerLink]="['/login']">LogIn</a></li>
+        <li *ngIf="!(loggedUser$ | async)"><a [routerLink]="['/register']">Register</a></li>
+    </ul>
+</nav>

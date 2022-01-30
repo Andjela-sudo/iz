@@ -1,0 +1,15 @@
+<div style="border: 1px solid black;">
+    <p>{{user.username}}</p>
+    <a [routerLink]="['/users',user.id]">User details</a>
+    <div *ngIf="(loggedUser$|async)?.role == 'admin'">
+        <button (click)="onDeleteUser()">Delete user</button>
+        
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdateUser()">
+            <input type="text" placeholder="new username..." formControlName="username">
+            <input type="email" placeholder="new email..."  formControlName="email">
+            <input type="text" placeholder="new password..."  formControlName="password">
+            <input type="text" placeholder="new role..."  formControlName="role">
+            <input type="submit" value="Update user">
+        </form>
+    </div>
+</div>
